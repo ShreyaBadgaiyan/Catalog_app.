@@ -1,3 +1,4 @@
+import 'package:demoapp/widgets/themes.dart';
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 import 'utils/routes.dart';
@@ -16,13 +17,9 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context){
     return MaterialApp(
       themeMode:ThemeMode.light,
-    theme:ThemeData(
-    primarySwatch:Colors.pink,
-    fontFamily:GoogleFonts.lato().fontFamily,
-    ),
-    darkTheme: ThemeData(
-      brightness:Brightness.dark,
-    ),
+    theme:MyTheme.lightTheme,
+    darkTheme: MyTheme.darkTheme,
+
     initialRoute: "/",
 
     routes:{
