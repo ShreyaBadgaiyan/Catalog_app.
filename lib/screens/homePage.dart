@@ -1,27 +1,32 @@
+import 'package:demoapp/models/catalog.dart';
 import 'package:demoapp/widgets/drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:demoapp/models/catalog.dart;
 
 
 
-class HomePage extends StatelessWidget {
+
+
+import '../widgets/item_widget.dart';class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Catalog App",
+        title: const Text("Catalog App",
         style: TextStyle(
           color: Colors.black,
         ),),
 
       ),
-      body: Center(
-        child: Container(
-
-        ),
+      body: ListView.builder(
+          itemCount: CatalogModel.items.length,
+           itemBuilder: (context,index){
+            return ItemWidget(key: null,);
+           },
       ),
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
     );
 
   }

@@ -22,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
       setState(() {
         changeButton = true;
       });
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 1));
       await Navigator.pushNamed(context,
           MyRoutes.homeRoute);
       setState(() {
@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor:Colors.white,
       appBar: AppBar(
-        title: Center(
+        title: const Center(
           child: Text('CATALOG APP',
           textAlign: TextAlign.center,
           style: TextStyle(
@@ -57,19 +57,19 @@ class _LoginPageState extends State<LoginPage> {
                 height: 200,
               ),
           
-              SizedBox(
+              const SizedBox(
                 height:20.0,
               ),
           
           
               Text("Welcome $name",
                 style:
-                TextStyle(
+                const TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height:20.0,
               ),
           
@@ -83,12 +83,12 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 children:[
                   TextFormField(
-                    style: TextStyle(
+                    style: const TextStyle(
                       decoration: TextDecoration.none,
                       decorationThickness: 0,
                     ),
           
-                    decoration:InputDecoration(
+                    decoration:const InputDecoration(
                       focusedBorder: InputBorder.none,
                       hintText: "Enter Username",
                       labelText:"Username",
@@ -110,13 +110,13 @@ class _LoginPageState extends State<LoginPage> {
           
                   ),
           
-                  SizedBox(
+                  const SizedBox(
                     height:20.0,
                   ),
           
                   TextFormField(
                     obscureText: true,
-                      decoration:InputDecoration(
+                      decoration:const InputDecoration(
           
                         hintText: "Enter Password",
                         labelText:"Password",
@@ -134,7 +134,7 @@ class _LoginPageState extends State<LoginPage> {
       return null;
     },),
           
-                  SizedBox(
+                  const SizedBox(
                     height:20.0,
                   ),
           
@@ -155,17 +155,17 @@ class _LoginPageState extends State<LoginPage> {
                       onTap: () =>moveToHome(context),
                       child:
                       AnimatedContainer(
-                       duration: Duration(seconds:1),
+                       duration: const Duration(seconds:1),
                         width:changeButton?50:150,
                         height:50,
           
                         alignment: Alignment.center,
-                        child: changeButton?Icon(
+                        child: changeButton?const Icon(
                             Icons.done,
           
                         color: Colors.white,
                         ):
-                        Text("Login",
+                        const Text("Login",
                         style:
                           TextStyle(
                             color:Colors.white,

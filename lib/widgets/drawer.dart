@@ -6,13 +6,13 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final imageURL="https://media.licdn.com/dms/image/D5603AQGVXTEyq1JyLg/profile-displayphoto-shrink_800_800/0/1686986503414?e=1712188800&v=beta&t=ha_Wb_XeAzZ2-q7yo3DuF54trR0LrlNk4oRmkC76nVo";
+    const imageURL="https://media.licdn.com/dms/image/D5603AQGVXTEyq1JyLg/profile-displayphoto-shrink_800_800/0/1686986503414?e=1712188800&v=beta&t=ha_Wb_XeAzZ2-q7yo3DuF54trR0LrlNk4oRmkC76nVo";
     return Drawer(
       child: Container(
         color: Colors.black12,
         child: ListView(
           padding: EdgeInsets.zero,
-          children: [
+          children: const [
             DrawerHeader(
                 padding: EdgeInsets.zero,
                 child: UserAccountsDrawerHeader(
